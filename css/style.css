@@ -58,6 +58,16 @@ body {
   -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  display: block;
+  top: 120px;
+  right: 50px;
+  transform: scale(0);
+  transition: ease 0.3s;
+}
+.search-form-active {
+  transform: scale(100%);
+  transition: ease 0.3s;
 }
 .search-form input {
   outline: none;
@@ -68,7 +78,9 @@ input {
   background-color: #fff;
   border: none;
 }
-
+.search {
+  cursor: pointer;
+}
 .home {
   background: url("../images/home.jpg");
   height: 100vh;
@@ -253,20 +265,6 @@ input {
 }
 .blog-text {
   padding: 20px;
-}
-@media screen and (max-width: 2000px) {
-  .search-form {
-    position: absolute;
-    display: block;
-    top: 120px;
-    right: 50px;
-    transform: scale(0);
-    transition: ease 0.3s;
-  }
-  .search-form-active {
-    transform: scale(100%);
-    transition: ease 0.3s;
-  }
 }
 @media screen and (max-width: 1010px) {
   .header {
